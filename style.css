@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+:root {
+    --main-color: ;
+    --secondary-color: ;
+}
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body {
+    font-family: 'Open Sans';
+    background-image: url('assets/gray-abstract-wireframe-technology-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 3px solid #e7e7;
+    box-shadow: 0 0 28px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 86vw;
+    height: 80vh;
+    display: flex;
+
+}
+
+.container img {
+    width: 40%;
+    height: 100%;
+}
+.form-container {
+    width: 100%;
+    background-color: rgb(238 238 238 / 68%);
+    padding: 24px;
+}
+.form-container h1 {
+    letter-spacing: 1.4px;
+    text-align: center;
+}
+.form-container h2 {
+    text-align: center;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: 10px 0;
+    position: relative;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 92px;
+    font-size: 1.1rem;
+    margin-left: 80px;
+}
+label {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    transition: .4s;
+    color: rgb(117, 117, 117);
+}
+input[type] {
+    border: none;
+    border-bottom: 2px #ccc solid;
+    background: none;
+    width: 86%;
+    padding-top: 30px;
+    outline: none;
+    transition: .4s;
+    margin-bottom: 14px;
+    font: inherit;
+}
+input:focus {
+    border-bottom: 2px rgb(33, 74, 209) solid;
+}
+button {
+    border: 2px solid black;
+    padding: 16px 24px;
+    font-size: 16px;
+    cursor: pointer;
+}
+@media (max-width: 1250px) {
+    .container {
+        width: 98vw;
+    }
+}
+@media (max-width: 999px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+
+    }
+    .container img{
+        display: none;
+    }
+    form {
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 0;
+    }
+    .field,button,input[type] {
+        width: 100%;
+    }
+}
